@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-    <meta charset="UTF-8">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,133 +23,384 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-
-</head>
+  </head>
 <style>
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://i2.wp.com/appykids.com/wp-content/uploads/2019/07/Play-School-Hero-BG-scaled.jpg?ssl=1');
+  font-family: "Lato", sans-serif;
+  background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
 }
 
-.box-sizing{
-    box-sizing: border-box;
-}
-
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5vw;
 }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
+.sidenav a {
+  padding: 2vw 2vw 2vw 3vw;
   text-decoration: none;
+  font-size: 25px;
+  color: #818181;
   display: block;
-  text-align: left;
+  transition: 0.3s;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
+
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 </style>
 </head>
 <body>
 
-<div class="navbar">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div>
-    <a href="https://gokul2009.github.io/Vedu/"><img src="https://i1.wp.com/vedu.academy/wp-content/uploads/2020/06/Vedu-W.png?fit=466%2C277&ssl=1"width=70 height=40></a>
+    <a href="C:\Users\91936\Desktop\Html files\website2\index.html"><img src="https://i1.wp.com/vedu.academy/wp-content/uploads/2020/06/Vedu-W.png?fit=466%2C277&ssl=1"width=90 height=60></a>
   </div>
-  <a href="https://gokul2009.github.io/Vedu/">Home</a>
-  <a href="https://gokul2009.github.io/about/">about</a>
-  <div class="dropdown">
-    <button class="dropbtn">select classes 
-      <i class="fa fa-caret-down"></i>
-    </button>
-     <div class="dropdown-content">
-      <a href="https://gokul2009.github.io/class-2/">class 2</a>
-      <a href="https://gokul2009.github.io/class-3/">class 3</a>
-      <a href="https://gokul2009.github.io/class-4/">class 4</a>
-      <a href="https://gokul2009.github.io/class-5/">class 5</a>
-      <a href="https://gokul2009.github.io/class-6/">class 6</a>
-      <a href="https://gokul2009.github.io/class-7/">class 7</a>
-      <a href="https://gokul2009.github.io/class-8/">class 8</a>
-      <a href="https://student.geneo.in/geneo_live/student_landing.aspx?v=1.88#">live classes/notes/textbook/videos</a>
-    </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="C:\Users\91936\Desktop\Html files\website2\index.html">Home</a>
+  <a href="C:\Users\91936\Desktop\Html files\website2\About.html">About</a>
+  <a href="C:\Users\91936\Desktop\Html files\website2\contact.html">Contact</a>
+  <a href="C:\Users\91936\Desktop\Html files\website2\select class.html">Select classes</a>
+</div>
 
-  </div> 
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<b>Vedu</b></span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+
+<h2 style="font-size:6vw">Class 2</h2>
+
+<button class="accordion" style="font-size:3vw">EVS</button>
+<div class="panel">
+  <button class="accordion" style="font-size:3vw">Chapter 1 – Invention of the Wheel</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 1 – Invention of the Wheel</p>
+  <iframe class="responsive-iframe"src="https://www.youtube.com/embed/OcTdxD-eKk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 2 – Good Habits</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 2 – Good Habits</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3F9Hi3Ip_0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 3 – Means of Communication</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 3 – Means of Communication</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/rVIigpWXR9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 4 – Clothes</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 4 – Clothes</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/k63rNMqtj_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 5- world around us</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 5 – World Around us</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ylSroSD9KS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 6 – Get To Know Me</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 6 – Get To Know Me</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/_p_Z2Br-Q5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 7 – Understanding Directions</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;"> Chapter 7 – Understanding Directions</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/In7_YaWfu-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 8 – Houses</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 8 – Houses</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/udwdInzAe88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 9 – Services In Neighbourhood</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 9 – Services In Neighbourhood</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1vOCIv0MQEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 10 – Time</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 10 – Time</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/afWkoYqn2XQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 11 –  Air and Water</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 11 –  Air and Water</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KVYRKC71Obk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 12 – Means of Transport</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 12 – Means of Transport</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/i7BERtZ_r60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+  <button class="accordion" style="font-size:3vw">Chapter 13 – Our Family</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 13 – Our Family</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Pxjv1nZImsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<button class="accordion"style="font-size:3vw">MATHS</button>
+<div class="panel">
+  <button class="accordion" style="font-size:3vw">Chapter 1 – What is Long, What is Round?</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 1 – What is Long, What is Round?</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KzR4b1h6qZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chapter 2 – Counting in Groups</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 2 – Counting in Groups</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Q4H7dQsPOFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chapter 3 – How Much Can You Carry?</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 3 – How Much Can You Carry?</p>
+  <iframe class="responsive-iframe"src="https://www.youtube.com/embed/Fb7_iJyBP_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chapter 4 – Counting in Tens</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 4 – Counting in Tens</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/TUAESPWnZtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">chapter 5 – Patterns</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 5 – Patterns</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/FrJ1R23aj4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chapter 6 – Footprints</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 6 – Footprints</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/s7Uy5SE1K2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <button class="accordion" style="font-size:3vw">Chapter 7 – Jugs and Mugs</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 7 – Jugs and Mugs</p>
+  <iframe class="responsive-text" src="https://www.youtube.com/embed/EEjyQ50Q6pc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 8 – Tens and Ones</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 8 – Tens and Ones</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/TUAESPWnZtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 9 – My Funday</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 9 – My Funday</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/kFLam8HVY4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chapter 10 – Add our Points</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 10 – Add our Points</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BoC6F6FoVBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 11 – Lines and Lines</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 11 – Lines and Lines</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/wyMQvwmmtZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 12 – Give and Take</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 12 – Give and Take</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/r_2vp_WXdzY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 13 – The Longest Step</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 13 – The Longest Step</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/mGRxhPQr8_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 14 – Birds Come, Birds Go</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 14 – Birds Come, Birds Go</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ZmLdAY0IZpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Chapter 15 – How Many Ponytails?</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chapter 15 – How Many Ponytails?</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/6vgV598OE6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+
+<button class="accordion"style="font-size:3vw">ENGLISH</button>
+<div class="panel">
+  <button class="accordion" style="font-size:3vw">First Day at School</button>
+  <div class="panel">
+<p class="responsive-text" style="font-size:5vw;"> First Day at School</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/bNvinZ9mYic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+ <button class="accordion" style="font-size:3vw">Haldi’s Adventure</button>
+  <div class="panel">
+<p class="responsive-text" style="font-size:5vw;">Haldi’s Adventure</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/EbusoxCSjs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+   <button class="accordion" style="font-size:3vw">I am Lucky!</button>
+  <div class="panel">
+<p class="responsive-text" style="font-size:5vw;">I am Lucky!</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/L9DWLMkbjCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+   <button class="accordion" style="font-size:3vw">I Want</button>
+  <div class="panel">
+<p class="responsive-text" style="font-size:5vw;">I Want</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/y8Q0jjdFaWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">A Smile</button>
+  <div class="panel">
+<p class="responsive-text" style="font-size:5vw;"> A Smile</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/O1eUFagVOHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Wind and the Sun</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">The Wind and the Sun</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/u21-bqp1SDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Rain</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Rain</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/wrnQsHxJ3k4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Storm in the Garden</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Storm in the Garden</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/8TtoYJpetsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Zoo Manners</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Zoo Manners</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/n2hzrILzVwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Funny Bunny</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Funny Bunny</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/D_pGPDJprrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Mr. Nobody</button>
+  <div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Mr. Nobody</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/8S_m_WXxkhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Curlylocks and the Three Bears</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Curlylocks and the Three Bears</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Ic3Mgtmdu9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">On My Blackboard I can Draw</button>
+  <div class="panel">
+<p class="responsive-text" style="font-size:5vw;"> On My Blackboard I can Draw</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/hnnLDd8Lhqk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Make it Shorter</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Make it Shorter</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/iaEKeXIVBu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">I am the Music Man</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;"> I am the Music Man</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/vWkHHm8tDbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Mumbai Musicians</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">The Mumbai Musicians</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/DNhDmMkr5Uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Granny Granny Please Comb my Hair</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Granny Granny Please Comb my Hair</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/s2AmHcbhWjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Magic Porridge Pot</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;"> The Magic Porridge Pot</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BW0bbGZLxZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Strange Talk</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Strange Talk</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/xuUHPU9mzvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Grasshopper and the Ant</button>
+  <div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">The Grasshopper and the Ant</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tjxJUq2h63g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </body>
-<head>
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+</div>
+<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+<script>
+  var myLandbot = new Landbot.Livechat({
+    configUrl: 'https://chats.landbot.io/v3/H-1087396-E4QEW9JDTUZ4R0FM/index.json',
+  });
+</script>
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-</body>
-</style>
-<body>
-  <p style="font-size:30px""font-family:'Courier New'">class 2 Science playlist</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLiPy3hM238v4DqsRMNMonZl0ghikIfSym" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p style="font-size:30px""font-family:'Courier New'">maths playlist</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLiPy3hM238v6Ly4ru_29bY8ObWfrSaaj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p style="font-size:30px""font-family:'Courier New'">english playlist</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLKL5SVm3Zx8cqLnCuRcXNGM57MU51t1EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  </body>
-</html>
+</html> 
