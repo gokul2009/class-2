@@ -27,7 +27,7 @@
 <style>
 body {
   font-family: "Lato", sans-serif;
-  background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg');
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/071/022/non_2x/abstract-header-design-template-3d-rounded-square-overlap-with-shadow-on-light-blue-polka-dot-background-vector.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%;
@@ -395,8 +395,23 @@ function closeNav() {
  <p class="responsive-text" style="font-size:5vw;">The Grasshopper and the Ant</p>
   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tjxJUq2h63g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-</body>
 </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 <script>
   var myLandbot = new Landbot.Livechat({
